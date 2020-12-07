@@ -8,7 +8,7 @@ exports.handler = async function () {
     let resObj = {
         statusCode: 200,
         headers,
-        body: {
+        body: JSON.stringify({
             name: 'Bob Ross',
             imgLink: 'https://s3-alpha-sig.figma.com/img/49cf/00e4/cb4613017bd10e2cc8f3e52bff78b2d9?Expires=1608508800&Signature=SgHuBbRVy73E2kh1lz8~M2hnU1UnsS8Uv8Yij8dwNdkwbveXC9UlUgGCUVPwG5F-iO4nNERH0u1FXSxLOUqlbg0fY4GHLN~bWQvTAa46OQj66Nt~PHeqcIBd0IwKpvTadO5yT3j4-~QVvwsDi3GXTncD4piETejbA9zLoj5a5PV7TlxDlyuMyfPgtJDrBzvXaG3wWNdXhuKgQmrsUVgRI9BcEzOfIoZC1VFaiSusvv11vBYBp15H5Ffnw-wf088m3RnczDnN3wgn2R8LeXNcXP8FPLkGQhUbueJlLPJsg1Lm-LQKXqxydpiWX8g5JoPUbeTj-bUBQ~6qwdyhW7rpMw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
             level: 'pro',
@@ -47,12 +47,12 @@ exports.handler = async function () {
                     mm: 2
                 }
             ]
-        }
+        })
     };
 
 
     try {
-        return JSON.stringify(resObj);
+        return resObj;
     } catch(err) {
         return {
             statusCode: 500,
