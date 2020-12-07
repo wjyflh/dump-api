@@ -4,6 +4,7 @@
   "description": "fake api for video",
   "main": "index.js",
   "scripts": {
+    "dev": "node -r esm ./functions/profile_infos.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jiang",
