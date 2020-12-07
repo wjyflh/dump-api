@@ -24,10 +24,4 @@ exports.handler = async function () {
             body: 'Internal Server Error'
         }
     }
-
-    return {
-        statusCode: 200,
-        headers,
-        body: 'ok'
-    }
 }
